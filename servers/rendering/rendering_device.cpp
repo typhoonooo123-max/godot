@@ -1599,6 +1599,8 @@ RID RenderingDevice::texture_create(const TextureFormat &p_format, const Texture
 		case TEXTURE_TYPE_MAX:
 			break;
 	}
+size_max = 16384;
+
 	ERR_FAIL_COND_V_MSG(format.width > size_max || format.height > size_max || format.depth > size_max, RID(), "Texture dimensions exceed device maximum.");
 
 	uint32_t required_mipmaps = get_image_required_mipmaps(format.width, format.height, format.depth);
