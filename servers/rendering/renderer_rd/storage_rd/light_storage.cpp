@@ -58,8 +58,8 @@ LightStorage::LightStorage() {
 		uint64_t textures_per_stage = RD::get_singleton()->limit_get(RD::LIMIT_MAX_TEXTURES_PER_SHADER_STAGE);
 
 		if (textures_per_stage <= 256) {
-			lightmap_textures.resize(32);
-			shadowmask_textures.resize(32);
+			lightmap_textures.resize(1024);
+			shadowmask_textures.resize(1024);
 		} else {
 			lightmap_textures.resize(1024);
 			shadowmask_textures.resize(1024);
